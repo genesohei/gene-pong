@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width">
+  <title>Atari - Pong</title>
+  <script src="js/gene.js"></script>
+  <script src="js/pong.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #151515;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container"></div>
+  <audio id="ping" preload="auto"><source src="audio/ping.wav"></audio>
+  <audio id="pong" preload="auto"><source src="audio/pong.wav"></audio>
+  <audio id="wall" preload="auto"><source src="audio/wall.wav"></audio>
+  <script type="text/javascript">
+    window.onload = function () {
+      var pong = new Pong.Game(640, 480, 'game-container');
+
+      pong.boot();
+    }
+  </script>
+</body>
+</html>
